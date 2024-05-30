@@ -22,7 +22,7 @@ our $schema = [str => {
 
 MARKDOWN
     in => [map {$_->{symbol}} @rows],
-    'x.in.summaries' => [map {$_->{eng_name}} @rows],
+    'x.completion' => 'nutrient_symbol',
     examples => [
         {value=>'', valid=>0, summary=>"Empty string"},
         {value=>'X', valid=>0, summary=>"Unknown nutrient"},
