@@ -1,5 +1,6 @@
-package Sah::Schema::array::nutrient;
+package Sah::Schema::nutrient::symbol;
 
+use 5.010001;
 use strict;
 
 # AUTHORITY
@@ -20,9 +21,8 @@ our $schema = [str => {
     description => <<'MARKDOWN',
 
 MARKDOWN
-    in => [map {$_->{symbol} @rows],
-    'x.in.summaries' => [map {$_->{eng_name} @rows],
-    prefilters => ['Array::check_elems_int_contiguous'],
+    in => [map {$_->{symbol}} @rows],
+    'x.in.summaries' => [map {$_->{eng_name}} @rows],
     examples => [
         {value=>'', valid=>0, summary=>"Empty string"},
         {value=>'X', valid=>0, summary=>"Unknown nutrient"},
