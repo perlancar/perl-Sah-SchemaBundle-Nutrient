@@ -22,6 +22,7 @@ our $schema = [str => {
 
 MARKDOWN
     in => [map {$_->{symbol}} @rows],
+    prefilters => ['Nutrient::canonicalize_nutrient_symbol'],
     'x.completion' => 'nutrient_symbol',
     examples => [
         {value=>'', valid=>0, summary=>"Empty string"},
